@@ -157,8 +157,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* تقسیم به دو ستون مساوی */
   gap: 15px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 .read-more-btn {
@@ -206,12 +205,6 @@ section {
 
 .contact-list a:hover .contact-icon {
   fill: #000;
-}
-
-section#home img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
 }
 
 form input,
@@ -262,10 +255,70 @@ button {
   margin-left: 38px;
   border-radius: 10%;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    /* background: powderblue; */
+
+.img-box {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.img-3,
+.img-4,
+.img-5 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  will-change: transform;
+  margin-top: 32px;
+}
+
+figure {
+  margin: 12px 18px;
+}
+.scr{
+  display: none;
+}
+.mob{
+  display: block;
+}
+
+@media (min-width: 768px)  {
+ body{
+  font-size: 24px;
+ }
+  .img-3 {
+    max-width: 50%;
+    margin-top: 48px;
   }
+  .scr{
+    display: block;
+  }
+  .mob{
+    display: none;
+  }
+  section{
+    margin-top: 68px;
+  }
+  section#about {
+    display: flex;
+    margin-top: 48px;
+  }
+  .more-info-list {
+    margin: 10%;
+  }
+  .stat-list {
+    max-width: 50%;
+  }
+  .mrl {
+    margin-left: 2%;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  section hr {
+    display: none;
+  }
+
   .box {
     display: none;
   }
@@ -283,33 +336,35 @@ button {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
   }
-  header nav ul li {
+  .gallery-item-horizontal {
+    width: 40%;
   }
-}
 
-.img-box {
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-}
-.img-3,
-.img-4,
-.img-5 {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  will-change: transform;
+  .gallery-item-horizontal img {
+    width: 100%;
+    height: 100%;
+    /* تغییر جدید: از cover استفاده کردم تا کادر را کامل پر کند و فضای سفید از بین برود */
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    display: block;
+  }
+
+  .gallery-item-horizontal img:hover {
+    transform: scale(1.05);
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 80px;
+  }
+  section#contact p{
+    max-width: 50%;
+  }
   
 }
-
-figure {
-  margin: 12px 18px;
-}
-
+/* 
 @media (min-width: 1200px) {
-
   .box {
     display: none;
   }
@@ -319,5 +374,42 @@ figure {
     justify-content: space-between;
     width: 70%;
   }
+  section#about img {
+    max-width: 60%;
+  }
+  section#about {
+    display: flex;
+  }
+  .img-3,.img-4 {
+    max-width: 60%;
+  }
+  .bio {
+    margin-left: 2%;
+  }
+  .gallery-horizontal-scroll {
+    max-height: 500px;
+    width: auto;
+  }
+  .gallery-horizontal-scroll img {
+    object-fit: cover;
+  }
+  h2 {
+    text-align: left;
+    margin-top: 80px;
+  }
+  .gallery-item-horizontal {
+    width: 40%;
+  }
 
-}
+  .gallery-item-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    display: block;
+  }
+
+  .gallery-item-horizontal img:hover {
+    transform: scale(1.05);
+  }
+} */
