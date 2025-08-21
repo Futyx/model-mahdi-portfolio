@@ -135,6 +135,7 @@ section {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .gallery-item-horizontal img {
@@ -275,13 +276,14 @@ button {
     justify-content: space-between;
   }
   header nav svg {
-    display: none;
+    margin: 0;
   }
   header nav {
     justify-content: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+
   }
   header nav ul li {
   }
@@ -297,8 +299,9 @@ button {
 .img-5 {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   will-change: transform;
+  
 }
 
 figure {
@@ -306,9 +309,7 @@ figure {
 }
 
 @media (min-width: 1200px) {
-  .container {
-    /* background: hotpink; */
-  }
+
   .box {
     display: none;
   }
@@ -318,7 +319,5 @@ figure {
     justify-content: space-between;
     width: 70%;
   }
-  header nav svg {
-    display: none;
-  }
+
 }
