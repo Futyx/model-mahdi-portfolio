@@ -156,8 +156,8 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-  font-size: 14px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
 }
 .read-more-btn {
   padding: 8px 12px;
