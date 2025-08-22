@@ -119,7 +119,6 @@ section {
   overflow-x: auto;
   gap: 20px;
   padding: 20px 0;
-  /* مخفی کردن اسکرول‌بار در مرورگرهای مختلف */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -129,8 +128,8 @@ section {
 }
 
 .gallery-item-horizontal {
-  flex: 0 0 auto; /* جلوگیری از تغییر ابعاد تصاویر */
-  width: 80%; /* ابعاد بزرگ‌تر برای هر عکس */
+  flex: 0 0 auto;
+  width: 80%; 
   max-width: 600px;
   overflow: hidden;
   border-radius: 10px;
@@ -144,26 +143,28 @@ section {
   object-fit: cover;
 }
 #more-info-content {
-  display: none; /* متن به صورت پیش‌فرض مخفی است */
+  display: none; 
   margin-top: 20px;
 }
 
 #more-info-content.show {
-  display: block; /* با اضافه شدن کلاس show، نمایش داده می‌شود */
+  display: block; 
 }
 .more-info-list {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* تقسیم به دو ستون مساوی */
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   font-size: 14px;
 }
 .read-more-btn {
   padding: 8px 12px;
   border: none;
   font-size: 18px;
+  color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .contact-list {
@@ -248,7 +249,6 @@ header nav img {
 
 .about {
   margin-top: 16px;
-  /* background: darkgoldenrod; */
 }
 button {
   margin-top: 10px;
@@ -344,7 +344,6 @@ figure {
   .gallery-item-horizontal img {
     width: 100%;
     height: 100%;
-    /* تغییر جدید: از cover استفاده کردم تا کادر را کامل پر کند و فضای سفید از بین برود */
     object-fit: cover;
     transition: transform 0.4s ease-in-out;
     display: block;
@@ -363,53 +362,3 @@ figure {
   }
   
 }
-/* 
-@media (min-width: 1200px) {
-  .box {
-    display: none;
-  }
-  header nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    width: 70%;
-  }
-  section#about img {
-    max-width: 60%;
-  }
-  section#about {
-    display: flex;
-  }
-  .img-3,.img-4 {
-    max-width: 60%;
-  }
-  .bio {
-    margin-left: 2%;
-  }
-  .gallery-horizontal-scroll {
-    max-height: 500px;
-    width: auto;
-  }
-  .gallery-horizontal-scroll img {
-    object-fit: cover;
-  }
-  h2 {
-    text-align: left;
-    margin-top: 80px;
-  }
-  .gallery-item-horizontal {
-    width: 40%;
-  }
-
-  .gallery-item-horizontal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease-in-out;
-    display: block;
-  }
-
-  .gallery-item-horizontal img:hover {
-    transform: scale(1.05);
-  }
-} */
