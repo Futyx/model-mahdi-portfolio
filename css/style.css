@@ -78,7 +78,6 @@ body {
 header nav ul {
   list-style: none;
   text-decoration: none;
-  /* display: none; */
 }
 h2 {
   text-align: center;
@@ -129,7 +128,7 @@ section {
 
 .gallery-item-horizontal {
   flex: 0 0 auto;
-  width: 80%; 
+  width: 80%;
   max-width: 600px;
   overflow: hidden;
   border-radius: 10px;
@@ -141,14 +140,19 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in-out;
+}
+.gallery-item-horizontal img:hover {
+  filter: none;
 }
 #more-info-content {
-  display: none; 
+  display: none;
   margin-top: 20px;
 }
 
 #more-info-content.show {
-  display: block; 
+  display: block;
 }
 .more-info-list {
   list-style: none;
@@ -156,7 +160,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 16px;
 }
 .read-more-btn {
@@ -164,7 +168,8 @@ section {
   border: none;
   font-size: 18px;
   color: #000;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 24px;
 }
 
 .contact-list {
@@ -232,6 +237,7 @@ section p {
 header nav img {
   width: 64px;
   height: auto;
+  filter: grayscale(100%);
 }
 .box {
   display: flex;
@@ -261,41 +267,50 @@ button {
   height: 700px;
   overflow: hidden;
 }
-.img-3,
-.img-4,
-.img-5 {
+.img-3 {
   width: 100%;
   height: 100%;
   object-fit: contain;
   will-change: transform;
-  margin-top: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in-out;
+}
+.img-3:hover {
+  filter: none;
 }
 
 figure {
   margin: 12px 18px;
 }
-.scr{
+.scr {
   display: none;
 }
-.mob{
+.mob {
   display: block;
 }
 
-@media (min-width: 768px)  {
- body{
-  font-size: 24px;
- }
+footer img {
+  width: 64px;
+  height: auto;
+  filter: grayscale(100%);
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
   .img-3 {
     max-width: 50%;
     margin-top: 48px;
   }
-  .scr{
+  .scr {
     display: block;
   }
-  .mob{
+  .mob {
     display: none;
   }
-  section{
+  section {
     margin-top: 68px;
   }
   section#about {
@@ -337,6 +352,7 @@ figure {
     margin-left: auto;
     margin-right: auto;
   }
+
   .gallery-item-horizontal {
     width: 40%;
   }
@@ -357,8 +373,7 @@ figure {
     text-align: left;
     margin-top: 80px;
   }
-  section#contact p{
+  section#contact p {
     max-width: 50%;
   }
-  
 }
